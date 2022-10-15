@@ -1,4 +1,4 @@
-import java.io.IOException;
+import java.io.IOException; //(1. )
 import java.net.URI;
 
 class Handler implements URLHandler {
@@ -6,7 +6,7 @@ class Handler implements URLHandler {
     // various requests.
     int num = 0;
 
-    public String handleRequest(URI url) {
+    public String handleRequest(URI url) { //(2. )
         if (url.getPath().equals("/")) {
             return String.format("Number: %d", num);
         } else if (url.getPath().equals("/increment")) {
